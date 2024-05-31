@@ -391,5 +391,9 @@ html{
 .is-scrolling.custom-height-control {
   @apply h-auto;
 }
-
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
 @import 'rich-text-editor.css';
