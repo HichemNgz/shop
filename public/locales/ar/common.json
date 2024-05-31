@@ -1,0 +1,357 @@
+{
+  "error-heading": "يبدو أنك تائه",
+  "error-sub-heading": "لا يمكننا العثور على الصفحة التي تبحث عنها",
+  "support-heading": "تحدث إلى شخص حقيقي",
+  "support-sub-heading": "هل أنت على الحياد؟ لدي سؤال؟ بحاجة الى توصية؟ خدمات الأعضاء موجودة دائمًا للمساعدة. أرسل لنا رسالة.",
+  "app-heading": "تطبيق شوك بازار",
+  "app-sub-heading": "<span> شارك <strong> أفكارك </ strong> & amp؛ تسوق <strong> الإلهام اللانهائي </ strong> </span>",
+  "collection-title-one": "ربيع جديد",
+  "collection-description-one": "أنماط جديدة متعددة الاستخدامات بلا حدود تقول نعم الربيع. الموسم يبدو مشرقًا.",
+  "collection-title-two": "وصولا الى النخاع",
+  "collection-description-two": "أنماط جديدة متعددة الاستخدامات بلا حدود تقول نعم الربيع. الموسم يبدو مشرقًا.",
+  "collection-title-three": "حياكة شتوية جديدة",
+  "collection-description-three": "أنماط جديدة متعددة الاستخدامات لا نهاية لها تقول نعم للربيع. يبدو الموسم مشرقًا.",
+  "collection-description-four": "من الاستوديو إلى الشارع ، تتكون مجموعتنا من الأنشطة الفنية عالية الأداء",
+  "collection-title-four": "جاهز للحفل",
+  "feature-title-one": "وفورات مضمونة",
+  "feature-description-one": "إذا لم تسدد رسوم عضويتك في المدخرات ، فسنقوم برد الفرق",
+  "feature-title-two": "جربها بدون مخاطر",
+  "feature-description-two": "إذا لم تسدد رسوم عضويتك في المدخرات ، فسنقوم برد الفرق",
+  "feature-title-three": "توصيل سريع للغاية",
+  "feature-description-three": "إذا لم تسدد رسوم عضويتك في المدخرات ، فسنقوم برد الفرق",
+  "feature-title-four": "أكثر من 1000 منتج بسعر التكلفة",
+  "feature-description-four": "إذا لم تسدد رسوم عضويتك في المدخرات ، فسنقوم برد الفرق",
+  "breadcrumb-home": "الصفحة الرئيسية",
+  "breadcrumb-search": "بحث",
+  "breadcrumb-products": "منتجات",
+  "breadcrumb-collection": "مجموعة",
+  "text-page-explore": "استكشاف",
+  "text-page-header": "عنوان الصفحة",
+  "text-page-order": "طلب",
+  "text-page-checkout": "الخروج",
+  "text-page-contact-us": "اتصل بنا",
+  "text-page-my-account": "حسابي",
+  "text-page-terms-of-service": "شروط الخدمة",
+  "text-page-privacy-policy": "سياسة الخصوصية",
+  "text-page-faq": "الأسئلة المتداولة",
+  "text-subscribe-heading": "احصل على نصائح الخبراء في صندوق الوارد الخاص بك",
+  "text-subscribe-description": "اشترك في النشرة الإخبارية لدينا وابق على اطلاع دائم.",
+  "text-subscribe-success": "لإكمال عملية الاشتراك ، يرجى النقر فوق الرابط الموجود في البريد الإلكتروني الذي أرسلناه لك للتو.",
+  "text-subscribe-sending": "إرسال ...",
+  "text-subscribe-error": "حدث خطأ ما!",
+  "text-banner-thumbnail": "صورة مصغرة للعلامة التجارية",
+  "text-brand-thumbnail": "صورة مصغرة للعلامة التجارية",
+  "text-support-thumbnail": "صورة مصغرة للدعم",
+  "text-category-thumbnail": "فئة العلامة التجارية",
+  "text-card-thumbnail": "صورة مصغرة للبطاقة",
+  "text-instagram-thumbnail": "صورة مصغرة في انستغرام",
+  "text-app-thumbnail": "صورة مصغرة للتطبيق ",
+  "text-manage-your": "إدارة الخاص بك",
+  "text-dashboard": "لوحة القيادة",
+  "text-account-dashboard": "من لوحة التحكم في حسابك يمكنك عرض",
+  "text-order": "الطلب",
+  "text-orders": "الطلبات",
+  "text-status": "الحالة",
+  "text-actions": "الإجراءات",
+  "text-filters": "الفلاتر",
+  "text-colors": "الألوان",
+  "text-clear-all": "مسح الكل",
+  "text-category": "الفئة",
+  "text-tags": "العلامات",
+  "text-sku": "SKU",
+  "text-brands": "العلامات التجارية",
+  "text-gender": "الجنس",
+  "text-account-details": "تفاصيل الحساب",
+  "text-change-password": "تغيير كلمة المرور",
+  "text-change-your-password": "تغيير كلمة المرور",
+  "text-logout": "تسجيل الخروج",
+  "text-unit-price": "سعر الوحدة",
+  "text-price": "السعر",
+  "text-shopping-cart": "عربة التسوق",
+  "text-empty-cart": "سلة التسوق فارغة.",
+  "text-proceed-to-checkout": "المتابعة للدفع",
+  "text-your-order": "طلبك",
+  "text-product": "المنتج",
+  "text-add-to-cart": "أضف إلى السلة",
+  "text-view-cart": "عرض عربة التسوق",
+  "text-view-details": "عرض التفاصيل",
+  "text-shipping": "الشحن",
+  "text-shipping-address": "عنوان الشحن",
+  "text-sub-total": "المجموع الفرعي",
+  "text-total": "إجمالي",
+  "text-order-number": "رقم الطلب",
+  "text-date": "التاريخ",
+  "text-note": "ملاحظة",
+  "text-map": "خريطة",
+  "text-payment-method": "طريقة الدفع",
+  "text-free": "مجاني",
+  "text-close": "إغلاق",
+  "text-or": "أو",
+  "text-and": "و",
+  "text-account": "الحساب",
+  "text-no-account": "ليس لديك أي حساب؟",
+  "text-have-account": "هل لديك حساب بالفعل؟",
+  "text-back-to": "العودة إلى",
+  "text-login": "تسجيل الدخول",
+  "text-sign-in": "تسجيل الدخول",
+  "text-register": "تسجيل",
+  "text-terms": "الشروط",
+  "text-policy": "السياسة",
+  "text-forgot-password": "هل نسيت كلمة المرور؟",
+  "text-reset-password": "إعادة تعيين كلمة المرور",
+  "text-get-in-touch": "تواصل معنا",
+  "text-find-us-here": "اعثر علينا هنا",
+  "text-address": "العنوان",
+  "text-address-details": "PO Box 14122 Collins Street West.Victoria",
+  "text-email": "البريد الإلكتروني",
+  "text-email-details": "example@example.com",
+  "text-phone": "الهاتف",
+  "text-phone-details": "+1 1234 5678 90، +1 0987 6543 21",
+  "text-order-received": "شكرًا لك. تم استلام طلبك.",
+  "text-pay-cash": "الدفع نقدًا عند التسليم",
+  "text-order-details": "تفاصيل الطلب",
+  "text-details": "التفاصيل",
+  "text-recent-orders": "الطلبات الأخيرة",
+  "text-discount-tag": "1000S من العناصر الجديدة تمت إضافتها للتو: تخفيضات إضافية بنسبة 20٪. عناصر مختارة. الأسعار كما هو محدد.",
+  "text-time-over": "انقضاء الوقت!",
+  "text-days": "أيام",
+  "text-hours": "ساعات",
+  "text-mins": "دقيقة",
+  "text-secs": "ثوان",
+  "text-fashion": "أزياء",
+  "text-sports": "رياضة",
+  "text-man": "رجل",
+  "text-woman": "امرأة",
+  "text-watch": "مشاهدة",
+  "text-new-year": "رأس السنة الجديدة",
+  "text-exclusive": "حصريًا",
+  "text-sold": "مباع",
+  "text-available": "متوفر",
+  "text-see-all-product": "عرض كل المنتجات",
+  "text-section-title": "عنوان القسم",
+  "text-flash-sale": "تنزيلات فلاش",
+  "text-shop-by-category": "تسوق حسب الفئة",
+  "text-featured-categories": "الفئات المميزة",
+  "text-top-brands": "أفضل العلامات التجارية",
+  "text-featured-products": "المنتجات المميزة",
+  "text-on-selling-products": "عند بيع المنتجات",
+  "text-top-products": "أفضل المنتجات",
+  "text-related-products": "المنتجات ذات الصلة",
+  "text-new-arrivals": "المنتجات الجديدة",
+  "text-best-sellers": "الأفضل مبيعًا",
+  "text-casual-wear": "ملابس غير رسمية",
+  "text-items": "عناصر",
+  "text-sorting-options": "خيارات الفرز",
+  "text-popularity": "الشعبية",
+  "text-price-low-high": "السعر: من الأقل إلى الأعلى",
+  "text-price-high-low": "السعر: من الأعلى إلى الأقل",
+  "text-instagram": "انستغرام",
+  "text-twitter": "تويتر",
+  "text-facebook": "موقع التواصل الاجتماعي الفيسبوك",
+  "text-youtube": "موقع YouTube",
+  "text-login-with-facebook": "تسجيل الدخول باستخدام Facebook",
+  "text-login-with-google": "تسجيل الدخول باستخدام Google",
+  "text-summer-collection": "مجموعة الصيف",
+  "text-subscribe-now": "اشترك الآن",
+  "text-newsletter-title": "واحصل على عرض على مجموعة جديدة",
+  "text-newsletter-subtitle": "اشترك في ChawkBazar لتلقي تحديثات حول الوافدين الجدد والعروض الخاصة وعروضنا الترويجية",
+  "text-collection-list": "قائمة المجموعات",
+  "text-collections": "المجموعات ",
+  "text-accept-cookies": "قبول ملفات تعريف الارتباط",
+  "text-cookies-title": "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك. بالنقر ، أنت توافق على سياسة الخصوصية الخاصة بنا.",
+  "login-helper": "تسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور",
+  "registration-helper": "من خلال التسجيل ، فإنك توافق على",
+  "forgot-password-helper": "سنرسل لك رابطًا لإعادة تعيين كلمة المرور",
+  "button-load-more": "تحميل المزيد",
+  "button-go-home": "اذهب للمنزل",
+  "button-place-order": "اطلب من هنا👉",
+  "button-send-message": "إرسال رسالة",
+  "button-submit": "إرسال",
+  "button-view": "عرض",
+  "button-save": "حفظ",
+  "button-app-store": "متجر التطبيقات",
+  "button-play-store": "متجر Play",
+  "button-subscribe": "الاشتراك",
+  "button-men-exclusive": "# الرجال الحصري",
+  "button-women-exclusive": "# حصريًا للنساء",
+  "button-view-collection": "عرض المجموعة",
+  "button-chat-services": "الدردشة مع خدمات الأعضاء",
+  "button-update": "تحديث",
+  "text-successfully-updated": "تم التحديث بنجاح!",
+  "text-tax-calculation-label": "الضرائب",
+  "text-tax-checkout-calculation": "محسوبة عند الخروج",
+  "text-shipping-calculation-label": "الشحن المقدر",
+  "text-tax-shipping-calculation": "محسوبة عند الخروج",
+  "text-shipping-cost": "تكلفة الشحن",
+  "text-discount-label": "خصم",
+  "text-search-result": "نتيجة البحث",
+  "text-shop": "محل",
+  "text-oldest": "الأقدم",
+  "text-newest": "الأحدث",
+  "text-no-products-found": "عذرا ، لم يتم العثور على منتجات",
+  "text-social": "اجتماعي",
+  "text-contact": "اتصل",
+  "text-call-us": "اتصل بنا",
+  "text-website": "موقع الكتروني",
+  "text-no-address": "لم يتم العثور على عنوان",
+  "text-no-contact": "لم يتم العثور على جهة اتصال",
+  "text-no-email": "لم يتم العثور على بريد إلكتروني",
+  "contact-success-message": "تم إرسال البريد الإلكتروني بنجاح",
+  "text-no-featured-products-found": "لم يتم العثور على منتجات مميزة!",
+  "text-no-flash-products-found": "لم يتم العثور على منتجات فلاش!",
+  "text-no-on-selling-products-found": "لم يتم العثور على منتجات بيع!",
+  "text-no-best-selling-products-found": "لم يتم العثور على أفضل المنتجات مبيعًا!",
+  "text-add": "أضف",
+  "text-type": "نوع",
+  "text-account-address": "العنوان",
+  "text-billing": "الفوترة",
+  "text-title": "العنوان",
+  "text-country": "البلد",
+  "text-city": "المدينة",
+  "text-state": "الولاية",
+  "text-zip": "ZIP",
+  "text-street-address": "عنوان الشارع",
+  "text-save": "حفظ",
+  "text-update": "تحديث",
+  "text-back-to-home": "العودة إلى الصفحة الرئيسية",
+  "text-total-amount": "إجمالي المبلغ",
+  "text-shipping-charge": "رسوم الشحن",
+  "text-tax": "الضريبة",
+  "text-discount": "الخصم",
+  "text-total-item": "إجمالي العنصر",
+  "text-deliver-time": "وقت التسليم",
+  "text-quantity": "الكمية",
+  "text-sub-orders": "الطلبات الفرعية",
+  "text-tracking-number": "رقم التتبع",
+  "text-total-price": "السعر الإجمالي",
+  "text-view": "عرض",
+  "text-add-new": "إضافة جديد",
+  "text-send-otp": "إرسال OTP",
+  "text-otp-code": "رمز OTP",
+  "text-verify-code": "رمز التحقق",
+  "text-otp-send-failed": "فشل إرسال رمز OTP",
+  "text-otp-verify-failed": "فشل التحقق من Otp",
+  "text-no-phone": "لم يتم إضافة رقم هاتف",
+  "text-no-google-map-key": "لم يتم إضافة مفتاح خريطة google",
+  "text-no-categories-found": "لم يتم العثور على فئات!",
+  "text-contact-number": "رقم الاتصال",
+  "text-billing-address": "عنوان الفواتير",
+  "text-have-coupon": "هل لديك قسيمة؟",
+  "text-enter-coupon": "أدخل رمز القسيمة هنا",
+  "text-apply": "تطبيق",
+  "text-no-products": "لم يتم العثور على منتجات",
+  "text-check-availability": "التحقق من التوفر",
+  "text-choose-payment": "اختر طريقة الدفع",
+  "text-add-new-address": "إضافة عنوان جديد",
+  "text-update-address": "تحديث العنوان",
+  "text-delivery-schedule": "جدول التسليم",
+  "text-no-delivery-time-found": "لم يتم العثور على جداول تسليم",
+  "text-cod-message": "الرجاء الدفع بعد استلام البضائع الخاصة بك!",
+  "text-message-sub-order": "هذا الطلب يحتوي على منتجات من بائعين متعددين. لذلك قمنا بتقسيم هذا الطلب إلى عدة طلبات من البائعين.",
+  "text-calculated-checkout": "محسوبة عند السداد",
+  "text-no-brands-found": "لم يتم العثور على ماركات",
+  "text-item": "العنصر",
+  "text-pay-first": "الرجاء الدفع أولاً",
+  "text-gateway-required": "البوابة مطلوبة",
+  "contact-number-required": "رقم جهة الاتصال مطلوب",
+  "button-delete": "حذف",
+  "delete-item-confirm": "هل أنت متأكد ، تريد الحذف؟",
+  "button-cancel": "إلغاء",
+  "text-confirm": "تأكيد",
+  "error-title-required": "العنوان مطلوب",
+  "error-country-required": "البلد مطلوب",
+  "error-city-required": "المدينة مطلوبة",
+  "error-state-required": "الولاية مطلوبة",
+  "error-zip-required": "الرمز البريدي مطلوب ",
+  "error-street-required": "عنوان الشارع مطلوب",
+  "text-coupon-required": "رمز القسيمة مطلوب",
+  "credential-wrong": "بيانات الاعتماد كانت خاطئة!",
+  "enough-permission": "ليس لديها إذن كافٍ",
+  "CHAWKBAZAR_ERROR.NOT_FOUND": "لم يتم العثور على",
+  "CHAWKBAZAR_ERROR.NOT_AUTHORIZED": "غير مفوض",
+  "CHAWKBAZAR_ERROR.INVALID_CREDENTIALS": "بيانات اعتماد غير صالحة",
+  "CHAWKBAZAR_ERROR.SOMETHING_WENT_WRONG": "حدث خطأ ما",
+  "CHAWKBAZAR_ERROR.PAYMENT_FAILED": "فشل الدفع",
+  "CHAWKBAZAR_ERROR.OTP_SEND_FAIL": "OTP لقد تعذر الارسال",
+  "CHAWKBAZAR_ERROR.OTP_VERIFICATION_FAILED": "فشل التحقق من OTP",
+  "CHAWKBAZAR_MESSAGE.NOT FOUND": "لم يتم تعيين عنوان البريد الإلكتروني لأي حساب مستخدم",
+  "CHAWKBAZAR_ERROR.OPERATION_NOT": "العملية غير",
+  "CHAWKBAZAR_ERROR.INSUFFICIENT_BALANCE": "رصيد غير كاف",
+  "CHAWKBAZAR_ERROR.WITHDRAW_MUST_BE_ATTACHED_TO_SHOP": "يجب إرفاق السحب بالمتجر",
+  "CHAWKBAZAR_ERROR.PLEASE_LOGIN_USING_FACEBOOK_OR_GOOGLE": "الرجاء تسجيل الدخول باستخدام Facebook أو Google",
+  "CHAWKBAZAR_ERROR.ACTION_NOT_VALID": "الإجراء غير صالح",
+  "CHAWKBAZAR_ERROR.SHOP_NOT_APPROVED": "متجر غير معتمد",
+  "CHAWKBAZAR_MESSAGE.NOT_FOUND": "لم يتم العثور عليه",
+  "CHAWKBAZAR_MESSAGE.CHECK_INBOX_FOR_PASSWORD_RESET_EMAIL": "تحقق من البريد الوارد لإعادة تعيين كلمة المرور",
+  "CHAWKBAZAR_MESSAGE.SOMETHING_WENT_WRONG": "حدث خطأ ما",
+  "CHAWKBAZAR_MESSAGE.TOKEN_IS_VALID": "الرمز المميز صالح",
+  "CHAWKBAZAR_MESSAGE.INVALID_TOKEN": "الرمز غير صالح",
+  "CHAWKBAZAR_MESSAGE.PASSWORD_RESET_SUCCESSFUL": "تمت إعادة تعيين كلمة المرور بنجاح",
+  "CHAWKBAZAR_MESSAGE.INVALID_CREDENTIALS": "بيانات الاعتماد المقدمة غير صالحة",
+  "CHAWKBAZAR_MESSAGE.EMAIL_SENT_SUCCESSFUL": "تم إرسال البريد الإلكتروني بنجاح",
+  "CHAWKBAZAR_MESSAGE.OLD_PASSWORD_INCORRECT": "كلمة مرور غير صالحة",
+  "text-brand": "العلامة التجارية",
+  "text-brand-colon": "العلامة التجارية:",
+  "text-shop-colon": "المتجر:",
+  "text-address-colon": "العنوان:",
+  "text-shops-title": "محلات السوبر بالقرب منك",
+  "text-more-info": "مزيد من المعلومات",
+  "text-now-call": "اتصل الآن",
+  "text-website-colon": "الموقع الإلكتروني:",
+  "text-visit-site": "قم بزيارة هذا الموقع",
+  "text-hello": "مرحبًا",
+  "text-call-now": "اتصل الآن",
+  "text-no-order-found": "لم يتم العثور على طلب",
+  "text-no-result-found": "لم يتم العثور على نتيجة",
+  "text-load-more-products": "تحميل المزيد من المنتجات",
+  "text-testimonial": "شهادة",
+  "text-browse-categories": "تصفح الفئات",
+  "text-products": "المنتجات",
+  "order-pending": "انتظار الطلب",
+  "order-processing": "معالجة الطلب",
+  "order-completed": "تم اكتمال الطلب",
+  "order-cancelled": "تم الغاء الأمر او الطلب",
+  "order-failed": "فشل الطلب",
+  "order-at-local-facility": "اطلب من المنشأة المحلية",
+  "order-out-for-delivery": "اطلب التسليم",
+  "payment-pending": "معالجة الدفع",
+  "payment-processing": "الدفع الناجح",
+  "payment-success": "عملية الدفع فشلت",
+  "payment-failed": "انعكاس دفع",
+  "payment-reversal": "انعكاس دفع",
+  "text-copied": "تم النسخ!",
+  "text-expired": "منتهي الصلاحية",
+  "text-card-number": "رقم البطاقة",
+  "text-cards": "البطاقات",
+  "profile-sidebar-my-cards": "بطاقاتي",
+  "profile-add-cards": "إضافة بطاقة",
+  "text-paypal": "باي بال",
+  "set-default-card-message": "تم تعيين البطاقة الافتراضية بنجاح",
+  "card-successfully-deleted": "تم الحذف بنجاح",
+  "card-successfully-add": "تمت إضافة البطاقة بنجاح",
+  "payment-successful": "تم الدفع بنجاح",
+  "default-btn-text": "تقصير",
+  "text-no-card-found": "لم يتم العثور على بطاقة",
+  "text-card-owner-name": "اسم مالك البطاقة",
+  "text-card-expire": "تاريخ انتهاء الصلاحية",
+  "text-company": "شركة",
+  "text-save-card": "احفظ البطاقة",
+  "text-add-default-card": "أضفها كبطاقة افتراضية",
+  "text-expire-date-placeholder": "شهر / سنة",
+  "text-name": "اسم",
+  "text-card-expiry": "تاريخ انتهاء الصلاحية",
+  "text-card-cvc": "CVC",
+  "text-delete": "يمسح",
+  "text-set-as-default": "تعيين كافتراضي",
+  "text-cash-on-delivery": "الدفع عند الاستلام",
+  "text-payment-order": "يرجى النقر فوق تقديم الطلب لإجراء الطلب والدفع",
+  "text-read-more": "قراءة المزيد",
+  "text-less": "أقل",
+  "text-title-days": "أيام",
+  "text-title-hours": "ساعات",
+  "text-title-minutes": "دقائق",
+  "text-title-seconds": "ثواني",
+  "text-title-change-language": "تغيير اللغة",
+  "text-title-language": "لغة",
+  "text-maintenance-mode-title": "يبدأ وضع الصيانة في"
+}
