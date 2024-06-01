@@ -40,7 +40,7 @@ const WidgetContact: FC = () => {
               href={contactDetails.website}
               className="ml-1 transition-colors duration-200 hover:text-black"
             >
-              {contactDetails.website}
+              {/*{contactDetails.website}*/} website
             </Link>
           </li>
         )}
