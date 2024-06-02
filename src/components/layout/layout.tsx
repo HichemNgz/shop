@@ -4,7 +4,7 @@ import MobileNavigation from '@components/layout/mobile-navigation/mobile-naviga
 import Search from '@components/common/search';
 import { useRouter } from 'next/router';
 import { Suspense } from 'react';
-import FbPixel from '@components/FbPixel';
+import FbPixel from '@components/FacebookPixel';
 
 const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
@@ -25,9 +25,7 @@ const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       {showMobileNavigation && <MobileNavigation />}
       <Search />
 
-      <Suspense fallback={null}>
-        <FbPixel/>
-      </Suspense>
+      <FacebookPixel />
     </div>
   );
 };
