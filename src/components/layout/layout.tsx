@@ -1,11 +1,8 @@
-"use cleint"
 import Header from '@components/layout/header/header';
 import Footer from '@components/layout/footer/footer';
 import MobileNavigation from '@components/layout/mobile-navigation/mobile-navigation';
 import Search from '@components/common/search';
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-const FbPixel = dynamic(() => import('@components/FbPixel'), { ssr: false });
 
 const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
@@ -25,9 +22,6 @@ const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       <Footer />
       {showMobileNavigation && <MobileNavigation />}
       <Search />
-      <Suspense fallback={null}>
-      <FbPixel/>
-        </Suspense>
     </div>
   );
 };
