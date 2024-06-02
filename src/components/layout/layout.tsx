@@ -3,6 +3,8 @@ import Footer from '@components/layout/footer/footer';
 import MobileNavigation from '@components/layout/mobile-navigation/mobile-navigation';
 import Search from '@components/common/search';
 import { useRouter } from 'next/router';
+import { Suspense } from 'react';
+import FbPixel from '@components/FbPixel';
 
 const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
@@ -22,6 +24,10 @@ const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       <Footer />
       {showMobileNavigation && <MobileNavigation />}
       <Search />
+
+      <Suspense fallback={null}>
+        <FbPixel/>
+      </Suspense>
     </div>
   );
 };
