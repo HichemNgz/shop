@@ -35,7 +35,7 @@ import SocialLoginProvider from '@providers/social-login-provider';
 import { SessionProvider } from 'next-auth/react';
 import Maintenance from '@components/maintenance/layout';
 import '../assets/styles/animation.css';
-import FacebookPixel from 'react-facebook-pixel';
+
 
 
 
@@ -85,24 +85,7 @@ function CustomApp({
   }, [dir]);
   
 
-useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const pixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID; // Use environment variable for the Pixel ID
-      if (pixelId) {
-        FacebookPixel.init(pixelId);
-        FacebookPixel.pageView();
 
-        const handleRouteChange = () => {
-          FacebookPixel.pageView();
-        };
-
-        router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-          router.events.off('routeChangeComplete', handleRouteChange);
-        };
-      }
-    }
-  }, [router.events]);
 
 
   return (
