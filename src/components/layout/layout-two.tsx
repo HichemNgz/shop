@@ -2,7 +2,7 @@ import Header from '@components/layout/header/header';
 import Footer from '@components/layout/footer/footer';
 import MobileNavigation from '@components/layout/mobile-navigation/mobile-navigation';
 import Search from '@components/common/search';
-import FbPixel from '@components/FbPixel';
+const FbPixel = dynamic(() => import('@components/FbPixel'), { ssr: false });
 
 const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
