@@ -3,7 +3,7 @@ import Footer from '@components/layout/footer/footer';
 import MobileNavigation from '@components/layout/mobile-navigation/mobile-navigation';
 import Search from '@components/common/search';
 import { Suspense } from 'react';
-import FbPixel from '@components/FacebookPixel';
+import FacebookPixel from '@components/FacebookPixel';
 
 const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   return (
