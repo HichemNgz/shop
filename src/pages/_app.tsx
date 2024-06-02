@@ -101,16 +101,7 @@ function CustomApp({
 
   return (
     <>
-      
-      <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
-        <SessionProvider session={session}>
-          <QueryClientProvider client={queryClient}>
-            <Hydrate state={pageProps.dehydratedState}>
-              <AppSettings>
-                <ManagedUIContext>
-                  <DefaultSeo />
-                  <Maintenance>
-                  <Script
+       <Script
         id="fb-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -127,6 +118,15 @@ function CustomApp({
           `,
         }}
       />
+      <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
+        <SessionProvider session={session}>
+          <QueryClientProvider client={queryClient}>
+            <Hydrate state={pageProps.dehydratedState}>
+              <AppSettings>
+                <ManagedUIContext>
+                  <DefaultSeo />
+                  <Maintenance>
+                 
                     {Boolean(authProps) ? (
                       <PrivateRoute>
                         {getLayout(<Component {...pageProps} />)}
