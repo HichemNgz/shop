@@ -64,9 +64,7 @@ const ProductCard: FC<ProductProps> = ({
     // Use a browser-only block to prevent 'window is not defined' error
     fbq.event("Product Click", { product_name: name });
     // Navigate to the product page
-    router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
-      locale: router.locale,
-    });
+    
   }
 
   return (
