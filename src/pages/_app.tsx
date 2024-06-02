@@ -35,7 +35,7 @@ import SocialLoginProvider from '@providers/social-login-provider';
 import { SessionProvider } from 'next-auth/react';
 import Maintenance from '@components/maintenance/layout';
 import '../assets/styles/animation.css';
-import FbPixel from '@components/FbPixel';
+
 
 
 function handleExitComplete() {
@@ -96,7 +96,7 @@ function CustomApp({
               <ManagedUIContext>
                 <DefaultSeo />
                 <Maintenance>
-                  <FbPixel/>
+                 
                   {Boolean(authProps) ? (
                     <PrivateRoute>
                       {getLayout(<Component {...pageProps} />)}
