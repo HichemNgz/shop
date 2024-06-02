@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import type { FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { useUI } from '@contexts/ui.context';
 import usePrice from '@lib/use-price';
 import { Product } from '@type/index';
@@ -60,28 +60,46 @@ const ProductCard: FC<ProductProps> = ({
 
   const router = useRouter();
 
+  const [clickedProduct, setClickedProduct] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (clickedProduct) {
+      if (typeof window !== 'undefined') {
+        // Ensure FacebookPixel is loaded and available
+        if (FacebookPixel) {
+          FacebookPixel.track('Click On Product', {
+            product_name: name,
+          });
+        }
+      }
+      navigateToProductPage();
+      setClickedProduct(null)
+    }
+  }, [clickedProduct]);
+
   function navigateToProductPage() {
     // Use a browser-only block to prevent 'window is not defined' error
-    if (typeof window !== 'undefined') {
+    {
+      /*if (typeof window !== 'undefined') {
       // Ensure FacebookPixel is loaded and available
       if (FacebookPixel) {
         FacebookPixel.track('Click On Product', {
           product_name: name,
         });
       }
+    }*/
     }
-  
+
     // Navigate to the product page
     router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
       locale: router.locale,
     });
   }
-  
 
   return (
     <>
       <div
-        onClick={navigateToProductPage}
+        onClick={() => setClickedProduct(name!)}
         className={cn(
           'group box-border overflow-hidden flex rounded-md cursor-pointer',
           {
