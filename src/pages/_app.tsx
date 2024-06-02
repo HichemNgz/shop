@@ -91,6 +91,7 @@ function CustomApp({
 
     const handleRouteChange = () => {
       fbq.pageview();
+      console.log("route changed")
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
