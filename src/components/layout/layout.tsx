@@ -23,7 +23,9 @@ const SiteLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       <Footer />
       {showMobileNavigation && <MobileNavigation />}
       <Search />
+      <Suspense fallback={null}>
       <FbPixel/>
+        </Suspense>
     </div>
   );
 };
