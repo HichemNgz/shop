@@ -35,6 +35,8 @@ import SocialLoginProvider from '@providers/social-login-provider';
 import { SessionProvider } from 'next-auth/react';
 import Maintenance from '@components/maintenance/layout';
 import '../assets/styles/animation.css';
+import FbPixel from '@components/FbPixel';
+
 
 function handleExitComplete() {
   if (typeof window !== 'undefined') {
@@ -80,6 +82,10 @@ function CustomApp({
   useEffect(() => {
     document.documentElement.dir = dir;
   }, [dir]);
+  
+
+
+
 
   return (
     <AnimatePresence initial={false} onExitComplete={handleExitComplete}>
@@ -90,6 +96,7 @@ function CustomApp({
               <ManagedUIContext>
                 <DefaultSeo />
                 <Maintenance>
+                  <FbPixel/>
                   {Boolean(authProps) ? (
                     <PrivateRoute>
                       {getLayout(<Component {...pageProps} />)}
