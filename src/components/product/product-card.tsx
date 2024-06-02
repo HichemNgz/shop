@@ -63,6 +63,7 @@ const ProductCard: FC<ProductProps> = ({
   function navigateToProductPage() {
     // Use a browser-only block to prevent 'window is not defined' error
     fbq.event("Product Click", { product_name: name });
+    console.log('pixel.FB_PIXEL_ID', pixel.FB_PIXEL_ID)
     // Navigate to the product page
     
   }
