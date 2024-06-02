@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import Image from 'next/image';
-import { useEffect, useState, type FC } from 'react';
+import type { FC } from 'react';
 import { useUI } from '@contexts/ui.context';
 import usePrice from '@lib/use-price';
 import { Product } from '@type/index';
@@ -8,7 +8,7 @@ import { siteSettings } from '@settings/site.settings';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ROUTES } from '@lib/routes';
-import FacebookPixel from 'react-facebook-pixel';
+import * as fbq from "../../lib/fpixel";
 
 interface ProductProps {
   product: Product;
@@ -60,36 +60,9 @@ const ProductCard: FC<ProductProps> = ({
 
   const router = useRouter();
 
-  const [clickedProduct, setClickedProduct] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (clickedProduct) {
-      if (typeof window !== 'undefined') {
-        // Ensure FacebookPixel is loaded and available
-        if (FacebookPixel) {
-          FacebookPixel.track('Click On Product', {
-            product_name: name,
-          });
-        }
-      }
-      navigateToProductPage();
-      setClickedProduct(null)
-    }
-  }, [clickedProduct]);
-
   function navigateToProductPage() {
     // Use a browser-only block to prevent 'window is not defined' error
-    {
-      /*if (typeof window !== 'undefined') {
-      // Ensure FacebookPixel is loaded and available
-      if (FacebookPixel) {
-        FacebookPixel.track('Click On Product', {
-          product_name: name,
-        });
-      }
-    }*/
-    }
-
+    fbq.event("Product Click", { product_name: name });
     // Navigate to the product page
     router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
       locale: router.locale,
@@ -99,7 +72,7 @@ const ProductCard: FC<ProductProps> = ({
   return (
     <>
       <div
-        onClick={() => setClickedProduct(name!)}
+        onClick={navigateToProductPage}
         className={cn(
           'group box-border overflow-hidden flex rounded-md cursor-pointer',
           {
