@@ -1,3 +1,4 @@
+"use cleint"
 import Header from '@components/layout/header/header';
 import Footer from '@components/layout/footer/footer';
 import MobileNavigation from '@components/layout/mobile-navigation/mobile-navigation';
