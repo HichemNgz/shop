@@ -61,11 +61,7 @@ const ProductCard: FC<ProductProps> = ({
   const router = useRouter();
 
   function navigateToProductPage() {
-    FacebookPixel.track('ClickOnProduct', {
-      product_name: name,
-      content_type: 'product',
-      
-    });
+   
     router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
       locale: router.locale,
     });
