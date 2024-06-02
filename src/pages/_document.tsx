@@ -6,6 +6,7 @@ import Document, {
 	DocumentContext,
 } from "next/document";
 import { getDirection } from "@utils/get-direction";
+import { FB_PIXEL_ID } from "../lib/fpixel";
 
 export default class CustomDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -16,6 +17,14 @@ export default class CustomDocument extends Document {
 		return (
       <Html dir={getDirection(locale)}>
         <Head>
+		<noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+        </noscript>
 			<link rel="icon" type="image/x-icon" href="/assets/images/logo-chic.png"/>
 		</Head>
         <body>
