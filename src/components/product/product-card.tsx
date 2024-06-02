@@ -61,11 +61,22 @@ const ProductCard: FC<ProductProps> = ({
   const router = useRouter();
 
   function navigateToProductPage() {
-   
+    // Use a browser-only block to prevent 'window is not defined' error
+    if (typeof window !== 'undefined') {
+      // Ensure FacebookPixel is loaded and available
+      if (FacebookPixel) {
+        FacebookPixel.track('Click On Product', {
+          product_name: name,
+        });
+      }
+    }
+  
+    // Navigate to the product page
     router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
       locale: router.locale,
     });
   }
+  
 
   return (
     <>
