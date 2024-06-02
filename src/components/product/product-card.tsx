@@ -8,6 +8,7 @@ import { siteSettings } from '@settings/site.settings';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ROUTES } from '@lib/routes';
+import FacebookPixel from 'react-facebook-pixel';
 
 interface ProductProps {
   product: Product;
@@ -60,6 +61,11 @@ const ProductCard: FC<ProductProps> = ({
   const router = useRouter();
 
   function navigateToProductPage() {
+    FacebookPixel.track('ClickOnProduct', {
+      product_name: name,
+      content_type: 'product',
+      
+    });
     router.push(`${ROUTES.PRODUCT}/${product.slug}`, undefined, {
       locale: router.locale,
     });
