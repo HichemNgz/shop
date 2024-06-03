@@ -22,6 +22,7 @@ import client from '@framework/utils/index';
 import { useRouter } from 'next/router';
 import { useUI } from '@contexts/ui.context';
 import { ROUTES } from '@lib/routes';
+import * as fbq from '../../lib/fpixel';
 
 export const useOrders = (options: OrdersQueryOptionsType) => {
   const { data, isLoading, error } = useQuery<Order, Error>(
@@ -100,7 +101,10 @@ export function useCreateOrder() {
   const { locale } = router;
   const { t } = useTranslation();
   const { mutate: createOrder, isLoading } = useMutation(client.orders.create, {
-    onSuccess: ({ tracking_number, payment_gateway, payment_intent }) => {
+    onSuccess: ({ tracking_number, payment_gateway, payment_intent }, variables) => {
+      fbq.event('Order Created', {
+        items: variables, // Pass the order details here
+      });
       if (tracking_number) {
         if ([PaymentGateway.COD].includes(payment_gateway as PaymentGateway)) {
           return router.push(
