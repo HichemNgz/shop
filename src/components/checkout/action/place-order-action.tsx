@@ -17,14 +17,13 @@ import {
 import { useTranslation } from 'next-i18next';
 import { useUser } from '@framework/auth';
 // import { useSettings } from "@contexts/settings.context";
+import * as fbq from '../../../lib/fpixel';
 
 export const PlaceOrderAction: React.FC<{
   children: React.ReactNode;
   infos: any;
   product?: any;
 }> = (props) => {
-  
-
   const router = useRouter();
   const { t } = useTranslation('common');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -65,8 +64,9 @@ export const PlaceOrderAction: React.FC<{
   // let freeShippings = freeShipping && Number(freeShippingAmount) <= subtotal;
   const total = calculatePaidTotal(
     {
-      totalAmount:
-        subtotal ? subtotal : props?.product?.sale_price
+      totalAmount: subtotal
+        ? subtotal
+        : props?.product?.sale_price
           ? props?.product?.sale_price * props?.product?.quantity
           : props?.product?.quantity * props?.product?.price,
       tax: 0,
@@ -77,10 +77,67 @@ export const PlaceOrderAction: React.FC<{
 
   // place order handle function
   const handlePlaceOrder = () => {
-    if (!props.infos.phone || !props.infos.name || !props.infos.city || !props.infos.address) {
-      setErrorMessage("الرجاء إدخال كل معلوماتك الشخصية");
+    if (
+      !props.infos.phone ||
+      !props.infos.name ||
+      !props.infos.city ||
+      !props.infos.address
+    ) {
+      setErrorMessage('الرجاء إدخال كل معلوماتك الشخصية');
       return;
     }
+
+    fbq.event('Place Order', {
+      products: available_items?.length
+        ? available_items?.map((item) => formatOrderedProduct(item))
+        : [
+            {
+              order_quantity: props?.product?.quantity,
+              product_id: props?.product?.id,
+              subtotal: props?.product?.sale_price
+                ? props?.product?.sale_price * props?.product?.quantity
+                : props?.product?.quantity * props?.product?.price,
+              unit_price: props?.product?.sale_price
+                ? props?.product?.sale_price
+                : props?.product?.price,
+            },
+          ],
+      // status: orderStatusData?.orderStatuses?.data[0]?.id ?? "1",
+      amount: subtotal
+        ? subtotal
+        : props?.product?.sale_price
+          ? props?.product?.sale_price * props?.product?.quantity
+          : props?.product?.quantity * props?.product?.price,
+      coupon_id: Number(coupon?.id),
+      discount: discount ?? 0,
+      paid_total: total,
+      sales_tax: 0,
+      delivery_fee: props?.infos?.deliveryPrice,
+      total,
+      delivery_time: 'No time',
+
+      customer_contact: props.infos?.phone,
+      customer_name: props.infos?.name,
+      customer_email: 'chicelegantes@gmail.com',
+      note: '',
+      use_wallet_points: null,
+      payment_gateway: 'CASH_ON_DELIVERY',
+
+      billing_address: {
+        city: props.infos?.city,
+        zip: '00000',
+        address: props.infos?.address,
+        country: 'Algeria',
+        state: 'Algeria',
+      },
+      shipping_address: {
+        city: props.infos?.city,
+        zip: '00000',
+        address: props.infos?.address,
+        country: 'Algeria',
+        state: 'Algeria',
+      },
+    });
 
     // if (payment_gateway === "STRIPE" && !token) {
     //   setErrorMessage(t("common:text-pay-first"));
@@ -103,13 +160,14 @@ export const PlaceOrderAction: React.FC<{
             },
           ],
       // status: orderStatusData?.orderStatuses?.data[0]?.id ?? "1",
-      amount:
-        subtotal ? subtotal : props?.product?.sale_price
+      amount: subtotal
+        ? subtotal
+        : props?.product?.sale_price
           ? props?.product?.sale_price * props?.product?.quantity
           : props?.product?.quantity * props?.product?.price,
       coupon_id: Number(coupon?.id),
       discount: discount ?? 0,
-      paid_total: total ,
+      paid_total: total,
       sales_tax: 0,
       delivery_fee: props?.infos?.deliveryPrice,
       total,
@@ -117,21 +175,21 @@ export const PlaceOrderAction: React.FC<{
 
       customer_contact: props.infos?.phone,
       customer_name: props.infos?.name,
-      customer_email: "chicelegantes@gmail.com",
+      customer_email: 'chicelegantes@gmail.com',
       note: '',
       use_wallet_points: null,
       payment_gateway: 'CASH_ON_DELIVERY',
 
       billing_address: {
         city: props.infos?.city,
-        zip: "00000",
+        zip: '00000',
         address: props.infos?.address,
         country: 'Algeria',
         state: 'Algeria',
       },
       shipping_address: {
         city: props.infos?.city,
-        zip: "00000",
+        zip: '00000',
         address: props.infos?.address,
         country: 'Algeria',
         state: 'Algeria',
