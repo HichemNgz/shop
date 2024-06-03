@@ -49,7 +49,10 @@ interface Props {
   // Add other props if needed
 }
 
-const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) => {
+const ProductSingleDetails: React.FC<Props> = ({
+  product,
+  placeOrderRef,
+}: any) => {
   const { t } = useTranslation();
   const { width } = useWindowSize();
   const { addItemToCart } = useCart();
@@ -113,7 +116,6 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
     });
 
     fbq.event('Add to cart', { item: item, quantity: quantity });
-
   }
 
   function handleAttribute(attribute: any) {
@@ -137,7 +139,6 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
   const variationImage = product.variation_options;
   const content = useSanitizeContent({ description: product?.description });
 
-  
   return (
     <div className="md:grid md:grid-cols-2 gap-8">
       <div>
@@ -163,20 +164,21 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
               />
             ) : (
               <>
-              {Number(product?.sale_price) &&
-            Number(product?.sale_price) < Number(product?.price) && (
-              <div className=" bg-red-600 px-2 py-1 font-bold text-white rounded-lg ml-2">
-                <div>
-                  %{' '}
-                  {Math.round(
-                    ((Number(product?.price) - Number(product?.sale_price)) /
-                      Number(product?.price)) *
-                      100,
+                {Number(product?.sale_price) &&
+                  Number(product?.sale_price) < Number(product?.price) && (
+                    <div className=" bg-red-600 px-2 py-1 font-bold text-white rounded-lg ml-2">
+                      <div>
+                        %{' '}
+                        {Math.round(
+                          ((Number(product?.price) -
+                            Number(product?.sale_price)) /
+                            Number(product?.price)) *
+                            100,
+                        )}
+                        -
+                      </div>
+                    </div>
                   )}
-                  -
-                </div>
-              </div>
-            )}
                 <div className="text-base font-semibold text-heading md:text-xl lg:text-2xl">
                   {price}
                 </div>
@@ -189,7 +191,7 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
               </>
             )}
           </div>
-          <div id="placeOrderSection"/>
+          <div id="placeOrderSection" />
           <CheckOutForm infos={infos} setInfos={setInfos} />
 
           <div className=" border-b pb-4 border-gray-300 flex gap-2 w-full flex-col-reverse md:flex-row md:items-center">
@@ -199,10 +201,14 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
                   {Number(product.quantity) > 0 ? (
                     <Counter
                       quantity={quantity}
-                      onIncrement={() => setQuantity((prev) => prev + 1)}
-                      onDecrement={() =>
-                        setQuantity((prev) => (prev !== 1 ? prev - 1 : 1))
-                      }
+                      onIncrement={() => {
+                        setQuantity((prev) => prev + 1);
+                        fbq.event('Qunatity increment', { quantity: quantity });
+                      }}
+                      onDecrement={() => {
+                        setQuantity((prev) => (prev !== 1 ? prev - 1 : 1));
+                        fbq.event('Qunatity decrement', { quantity: quantity });
+                      }}
                       disableDecrement={quantity === 1}
                       disableIncrement={Number(product.quantity) === quantity}
                     />
@@ -237,8 +243,8 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
                 </>
               )}
             </div>
-            
-            <div className="flex-1"  ref={placeOrderRef}>
+
+            <div className="flex-1" ref={placeOrderRef}>
               <PlaceOrderAction
                 product={{ ...product, quantity: quantity }}
                 infos={infos}
@@ -282,8 +288,6 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
           ) : (
             ''
           )}
-
-          
         </div>
         {!isEmpty(variations) && (
           <div className="pb-3 border-b border-gray-300 pt-7">
