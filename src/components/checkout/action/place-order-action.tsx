@@ -89,11 +89,12 @@ export const PlaceOrderAction: React.FC<{
 
     fbq.event('Place Order', {
       products: available_items?.length
-        ? available_items?.map((item) => formatOrderedProduct(item))
+        ? available_items?.map((item) => (item))
         : [
             {
               order_quantity: props?.product?.quantity,
               product_id: props?.product?.id,
+              product_name: props?.product?.name,
               subtotal: props?.product?.sale_price
                 ? props?.product?.sale_price * props?.product?.quantity
                 : props?.product?.quantity * props?.product?.price,
