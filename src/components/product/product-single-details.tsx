@@ -21,6 +21,7 @@ import isMatch from 'lodash/isMatch';
 import { ROUTES } from '@lib/routes';
 import cn from 'classnames';
 import dynamic from 'next/dynamic';
+import * as fbq from '../../lib/fpixel';
 const FavoriteButton = dynamic(
   () => import('@components/product/favorite-button'),
   {
@@ -110,6 +111,9 @@ const ProductSingleDetails: React.FC<Props> = ({ product, placeOrderRef }: any) 
       pauseOnHover: true,
       draggable: true,
     });
+
+    fbq.event('Add to cart', { item: item, quantity: quantity });
+
   }
 
   function handleAttribute(attribute: any) {
