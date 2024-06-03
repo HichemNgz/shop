@@ -13,6 +13,7 @@ import NotFoundItem from '@components/404/not-found-item';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { getCategoryTypeImage } from '@lib/get-category-type-image';
+import * as fbq from '../lib/fpixel';
 
 interface CategoriesProps {
   sectionHeading: string;
@@ -112,6 +113,10 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 }) => {
   const { t } = useTranslation();
 
+  const handleTriggerCategoryClickEvent = (name: string) => {
+    fbq.event('Category Click', { Category_name: name });
+  };
+
   const {
     data: categories,
     isLoading: loading,
@@ -185,6 +190,9 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
                     effectActive={true}
                     effectPosition={effectPosition}
                     image={getCategoryTypeImage(category, type)}
+                    onClick={() =>
+                      handleTriggerCategoryClickEvent(category?.name as string)
+                    }
                   />
                 </SwiperSlide>
               ))}
