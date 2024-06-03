@@ -21,7 +21,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
     fbq.event('Click on form', {})
   }
   return (
-    <div onClick={sendClickEvent} className="p-5 bg-white border border-gray-100 rounded-md shadow-checkoutCard md:p-7 flex flex-col gap-4">
+    <div onClick={sendClickEvent} className=" bg-white border border-gray-100 rounded-md shadow-checkoutCard p-2 lg:p-7 md:flex md:flex-col  lg:grid lg:grid-cols-2  grid grid-cols-2 gap-4">
       <div className="mb-4">
         <label htmlFor="phone-input" className="block mb-2 text-sm font-medium text-gray-700">
           رقم الهاتف
