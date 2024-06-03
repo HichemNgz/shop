@@ -183,17 +183,20 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
               })
             : categories?.data?.map((category) => (
                 <SwiperSlide key={`category--key-${category.id}`}>
-                  <Card
-                    item={category}
-                    href={`${ROUTES.CATEGORY}/${category.slug}`}
-                    variant={variant}
-                    effectActive={true}
-                    effectPosition={effectPosition}
-                    image={getCategoryTypeImage(category, type)}
+                  <div
                     onClick={() =>
                       handleTriggerCategoryClickEvent(category?.name as string)
                     }
-                  />
+                  >
+                    <Card
+                      item={category}
+                      href={`${ROUTES.CATEGORY}/${category.slug}`}
+                      variant={variant}
+                      effectActive={true}
+                      effectPosition={effectPosition}
+                      image={getCategoryTypeImage(category, type)}
+                    />
+                  </div>
                 </SwiperSlide>
               ))}
         </Carousel>
