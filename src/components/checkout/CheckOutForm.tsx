@@ -21,7 +21,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
     fbq.event('Click on form', {})
   }
   return (
-    <div onClick={sendClickEvent} className=" bg-white border border-gray-100 rounded-md shadow-checkoutCard p-2 lg:p-7 md:flex md:flex-col  lg:grid lg:grid-cols-2  grid grid-cols-2 gap-4">
+    <div onClick={sendClickEvent} className=" bg-white border border-black rounded-md shadow-checkoutCard p-2 lg:p-7 md:flex md:flex-col  lg:grid lg:grid-cols-2  grid grid-cols-2 gap-4">
       <div className="mb-4">
         <label htmlFor="phone-input" className="block mb-2 text-sm font-medium text-gray-700">
           رقم الهاتف
@@ -34,7 +34,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
           variant="outline"
           type="number"
           placeholder="رقم الهاتف"
-          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-black focus:outline-none focus:border-heading h-11 md:h-12"
         />
       </div>
 
@@ -49,7 +49,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
           onChange={(e) => setInfos({ ...infos, name: e.target.value })}
           variant="outline"
           placeholder=" الاسم الكامل"
-          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-black focus:outline-none focus:border-heading h-11 md:h-12"
         />
       </div>
 
@@ -64,7 +64,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
           onChange={(e) => setInfos({ ...infos, email: e.target.value })}
           variant="outline"
           placeholder="Email"
-          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-black focus:outline-none focus:border-heading h-11 md:h-12"
         />
   </div>*/}
 
@@ -75,7 +75,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
         <select
           id="city-select"
           onChange={handleCityChange}
-          className="block w-full p-2 border border-gray-300 rounded-md bg-white"
+          className="block w-full p-2 border border-black rounded-md bg-white"
         >
           <option value="">الولاية</option>
           {cities?.map((city, index) => (
@@ -106,7 +106,7 @@ const CheckOutForm = ({ infos, setInfos }: any) => {
           onChange={(e) => setInfos({ ...infos, address: e.target.value })}
           variant="outline"
           placeholder="العنوان"
-          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-12"
+          inputClassName="py-2 px-4 md:px-5 w-full appearance-none border text-input text-xs md:text-[13px] lg:text-sm font-body rounded-md placeholder-body min-h-12 transition duration-200 ease-in-out bg-white border-black focus:outline-none focus:border-heading h-11 md:h-12"
         />
       </div>
     </div>
