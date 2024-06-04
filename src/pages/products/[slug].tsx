@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState } from 'react';
 import Button from '@components/ui/button';
 import { useTranslation } from 'react-i18next';
+import Pixel from '@components/pixel';
 
 export { getStaticPaths, getStaticProps } from '@framework/product.ssr';
 
@@ -48,9 +49,17 @@ export default function ProductPage({ product }: any) {
   const scrollToPlaceOrder = () => {
     const placeOrderSection = document.getElementById('placeOrderSection');
     if (placeOrderSection) {
-      placeOrderSection.scrollIntoView({ behavior: 'smooth' });
+      const offset = 85;
+      const elementPosition = placeOrderSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
+  
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
@@ -157,6 +166,7 @@ export default function ProductPage({ product }: any) {
             </a>
           </div>
         )}
+        
       </Container>
     </div>
   );
